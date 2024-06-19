@@ -1,0 +1,8 @@
+#dependency
+node_modules/
+#report generator folder
+allure-report/
+#html allure report folder
+allure-results/
+#ignored as this was only meant for initial project execution
+features/
