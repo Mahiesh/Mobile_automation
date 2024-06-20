@@ -16,16 +16,17 @@ Given(/^App gets launched and login screen displays$/, async() => {
 	
 });
 
-
+// user enters valid username and password
 Given(/^user enters valid username and password$/, async() => {
-	//await method.login('standard_user','secret_sauce')
 	await method.login(assert.stringMessage.validUserName,assert.stringMessage.validPassword)
 });
 
+//user taps on login button
 When(/^user taps on login button$/, async() => {
 	await method.pressLoginBtn()
 });
 
+//user navigates to product screen and validates title PRODUCTS
 Then(/^user is logged in successfully and navigated to product screen$/, async() => {
 	await method.sleep(20000);
 	const reply = await method.validateLoginStatus()
